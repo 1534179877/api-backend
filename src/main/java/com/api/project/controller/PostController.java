@@ -1,5 +1,7 @@
 package com.api.project.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.api.project.annotation.AuthCheck;
 import com.api.project.common.BaseResponse;
 import com.api.project.common.DeleteRequest;
@@ -11,11 +13,9 @@ import com.api.project.model.dto.post.PostAddRequest;
 import com.api.project.model.dto.post.PostQueryRequest;
 import com.api.project.model.dto.post.PostUpdateRequest;
 import com.api.project.model.entity.Post;
-import com.api.project.model.entity.User;
 import com.api.project.service.PostService;
 import com.api.project.service.UserService;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.api.apicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * 帖子接口
  *
- * @author api
+
  */
 @RestController
 @RequestMapping("/post")

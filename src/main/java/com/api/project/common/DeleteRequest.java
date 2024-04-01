@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 删除请求
  *
- * @author api
+
  */
 @Data
 public class DeleteRequest implements Serializable {
@@ -18,3 +18,4 @@ public class DeleteRequest implements Serializable {
 
     private static final long serialVersionUID = 1L;
 }
+

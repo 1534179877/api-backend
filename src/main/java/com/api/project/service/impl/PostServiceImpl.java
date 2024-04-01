@@ -1,8 +1,8 @@
 package com.api.project.service.impl;
 
-import com.api.project.exception.BusinessException;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.api.project.common.ErrorCode;
+import com.api.project.exception.BusinessException;
 import com.api.project.mapper.PostMapper;
 import com.api.project.model.entity.Post;
 import com.api.project.model.enums.PostGenderEnum;
@@ -13,8 +13,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 /**
- * @author apili
- * @description 针对表【post(帖子)】的数据库操作Service实现
+ * 帖子服务实现类
+ *
+
  */
 @Service
 public class PostServiceImpl extends ServiceImpl<PostMapper, Post> implements PostService {

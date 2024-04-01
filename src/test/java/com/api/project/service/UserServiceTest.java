@@ -1,6 +1,6 @@
 package com.api.project.service;
 
-import com.api.project.model.entity.User;
+import com.api.apicommon.model.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 /**
  * 用户服务测试
  *
- * @author api
+
  */
 @SpringBootTest
 class UserServiceTest {
@@ -39,6 +39,7 @@ class UserServiceTest {
         Assertions.assertTrue(result);
     }
 
+
     @Test
     void testGetUser() {
         User user = userService.getById(1L);
@@ -53,21 +54,21 @@ class UserServiceTest {
         try {
             long result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
-            userAccount = "pxy";
+            userAccount = "yu";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
             userAccount = "api";
             userPassword = "123456";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
-            userAccount = "pxxy";
+            userAccount = "yu pi";
             userPassword = "12345678";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
             checkPassword = "123456789";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
-            userAccount = "apia";
+            userAccount = "dogapi";
             checkPassword = "12345678";
             result = userService.userRegister(userAccount, userPassword, checkPassword);
             Assertions.assertEquals(-1, result);
