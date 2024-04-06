@@ -55,4 +55,13 @@ create table if not exists apidb.`user_interface_info`
     `isDelete` tinyint default 0 not null comment '是否删除(0-未删, 1-已删)'
 ) comment '用户调用接口关系';
 
- insert into apidb.user(id, userName, userAccount, userAvatar, gender, userRole, userPassword, accessKey, secretKey, createTime, updateTime, isDelete) values (1,'庞鑫雨','pxy13417','','0','','1234','','','','','0')
+
+INSERT INTO apidb.interface_info (id, name, description, url, requestParams, requestHeader, responseHeader, status, method, userId, createTime, updateTime, isDelete) VALUES (1, '1', 'test', '1', '1', '1', '1', 0, 'post', 2, '2024-03-20 23:52:26', '2024-03-23 23:17:27', 1);
+INSERT INTO apidb.interface_info (id, name, description, url, requestParams, requestHeader, responseHeader, status, method, userId, createTime, updateTime, isDelete) VALUES (2, '请求', 'aaa', '/admin', 'rewq·', 'ewq', 'ewqeqwe', 0, 'post', 2, '2024-03-21 23:54:35', '2024-03-28 22:35:00', 0);
+INSERT INTO apidb.interface_info (id, name, description, url, requestParams, requestHeader, responseHeader, status, method, userId, createTime, updateTime, isDelete) VALUES (3, '1', 'test', '1', '1', '1', '1', 1, 'post', 2, '2024-03-23 22:14:58', '2024-03-24 18:10:25', 0);
+INSERT INTO apidb.interface_info (id, name, description, url, requestParams, requestHeader, responseHeader, status, method, userId, createTime, updateTime, isDelete) VALUES (4, 'getUsernameByPost', '获取用户名', 'http://localhost:8123/api/name/user', '{\'userName\':\'name\'}', '{\'Content-Type\':\'application/json\'}', '{\'Content-Type\':\'application/json\'}', 1, 'POST', 2, '2024-03-24 00:04:56', '2024-03-27 22:18:45', 0);
+INSERT INTO apidb.interface_info (id, name, description, url, requestParams, requestHeader, responseHeader, status, method, userId, createTime, updateTime, isDelete) VALUES (5, 'getlover', '获取你未来对象的微信', 'http://localhost:8123/api/name/queryLoversWx', '{\'name\':\'name\'}', '{\'Content-Type\':\'application/json\'}', '{\'Content-Type\':\'application/json\'}', 1, 'POST', 2, '2024-03-27 22:56:24', '2024-03-27 22:56:24', 0);
+
+INSERT INTO apidb.user (id, userName, userAccount, userAvatar, gender, userRole, userPassword, accessKey, secretKey, createTime, updateTime, isDelete) VALUES (2, 'pp', 'pxy', '', null, 'admin', 'ba85be716df69c74e8daad0398b5aa85', '1234', '1234', '2024-03-20 23:25:58', '2024-04-06 10:54:09', 0);
+
+INSERT INTO apidb.user_interface_info (id, userId, interfaceInfoId, totalNum, leftNum, status, createTime, updateTime, isDelete) VALUES (1, 1, 1, 11, 0, 1, '2024-03-23 22:22:53', '2024-03-23 22:22:53', 0);
